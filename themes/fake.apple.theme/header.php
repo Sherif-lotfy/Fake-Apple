@@ -8,3 +8,6 @@
 <body>
     
 <?php wp_head()?>
+<?php
+// 'main-nav'
+wp_nav_menu( array('main-nav' => 'main header menu') );

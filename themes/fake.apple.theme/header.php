@@ -8,6 +8,9 @@
 <body>
     
 <?php wp_head()?>
+<div class="menu-main-nav-container">
 <?php
 // 'main-nav'
-wp_nav_menu( array('main-nav' => 'main header menu') );
+wp_nav_menu( array('main-nav' => 'main-nav') );
+?>
+</div>

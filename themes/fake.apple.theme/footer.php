@@ -19,7 +19,7 @@
 
             $url = explode('/',$_SERVER["REQUEST_URI"]);
             $target = $url[count($url)-2];
-            if ($target != "fake-apple"){
+            if ($target != "fake-apple" &&  $target != "Fake-Apple"){
                 echo("<pre><a href=\"$HomeuUrl\"><i class='fa-brands fa-apple'></i></a>  >  $target</pre>");
                 echo "<br>";
                 echo "<br>";

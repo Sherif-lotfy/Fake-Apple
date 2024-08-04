@@ -12,8 +12,9 @@
 <?php
 wp_nav_menu(array(
     'theme_location' => 'main-nav',
-    'container' => 'div', // Optional, to wrap the menu in a <nav> tag
-    'menu_class' => 'main-nav-class' // Optional, to add a class to the menu
+    'container' => 'div', 
+    'menu_class' => 'main-nav-class' 
 ));
 ?>
+
 </div>

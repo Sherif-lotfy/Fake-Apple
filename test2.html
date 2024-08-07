@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .parent {
+            background: #444;
+            color: white;
+            height: 200px;
+            width: 100%;
+            cursor: pointer;
+            position: absolute;
+            transition: all 0.3s;
+            z-index: 5;
+        }
+        .child {
+            width: 100%;
+            height: 50px;
+            /* display: flex;
+            align-items: flex-start;
+            justify-content: space-around; */
+        }
+        .child:hover {
+            color: #eee;
+        }
+        .child:has(.menu-item:hover)  ~ .action {
+            display: block;
+        }
+        .parent:has(.menu-item:hover), .parent:has(.action:hover) {
+            height: 500px;
+        }
+        .fix {
+            height: 200px;
+            width: 100%;
+            z-index: -1;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(1px); 
+            display: none;
+            z-index: 2; 
+        }
+        .parent:has(.menu-item:hover) ~ .overlay, .parent:has(.action:hover) ~ .overlay {
+            display: block;
+            pointer-events: none; 
+        }
+        .parent:has(.menu-item:hover) ~ .overlay::before, .parent:has(.action:hover) ~ .overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: all;
+        }
+        h1 {
+            color: white;
+            font-family: sans-serif;
+        }
+        .action {
+            display: none;
+            width: 100%;
+            height: 450px;
+            transition: all 0.3s;
+        }
+        .action:hover {
+            display: block;
+        }
+        .main-nav-class {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            font-family: sans-serif;
+        }
+        .menu-item {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+    <title>Hover</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <ul class="main-nav-class">
+                <li class="menu-item">item1</li>
+                <li class="menu-item">item2</li>
+                <li class="menu-item">item3</li>
+                <li class="menu-item">item4</li>
+            </ul>
+        </div>
+        <div class="action">
+            <h1>someText...</h1>
+        </div>
+    </div>
+    <div class="fix"></div>
+    <div class="overlay"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    test3
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    test4
+</body>
+</html>

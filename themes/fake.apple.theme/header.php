@@ -6,15 +6,21 @@
     <title>Fake-Apple</title>
 </head>
 <body>
-    
-<?php wp_head()?>
-<div class="menu-main-nav-container">
-<?php
-wp_nav_menu(array(
-    'theme_location' => 'main-nav',
-    'container' => 'div', 
-    'menu_class' => 'main-nav-class' 
-));
-?>
+    <?php wp_head()?>
+        <div class="menu-main-nav-container parent">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'main-nav',
+                'container' => 'div', 
+                'menu_class' => 'main-nav-class' 
+            ));
+            ?>
+            <div class="action">
+                <h1>someText...</h1>
+            </div>
+        </div>
+        <div class="fix"></div>
+        <div class="overlay"></div>
 
+    <div class="overlay"></div>
 </div>

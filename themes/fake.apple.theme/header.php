@@ -15,8 +15,32 @@
                 'menu_class' => 'main-nav-class' 
             ));
             ?>
-            <div class="action">
-                <h1>someText...</h1>
+            <div class="mac">
+                <h1>Mac menu</h1>
+            </div>
+            <div class="ipad">
+                <h1>ipad menu</h1>
+            </div>
+            <div class="iphone">
+                <h1>iphone menu</h1>
+            </div>
+            <div class="watch">
+                <h1>watch menu</h1>
+            </div>
+            <div class="airpods">
+                <h1>airpods menu</h1>
+            </div>
+            <div class="tv">
+                <h1>TV & Home menu</h1>
+            </div>
+            <div class="entertain">
+                <h1>entertainment menu</h1>
+            </div>
+            <div class="support">
+                <h1>support menu</h1>
+            </div>
+            <div class="where">
+                <h1>where to buy menu</h1>
             </div>
         </div>
         <div class="fix"></div>

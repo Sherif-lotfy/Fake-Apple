@@ -1,0 +1,82 @@
+.parent .menu-main-nav-container:has(#menu-item-123:hover)  ~ .mac,
+.parent .menu-main-nav-container:has(#menu-item-121:hover)  ~ .ipad,
+.parent .menu-main-nav-container:has(#menu-item-122:hover)  ~ .iphone,
+.parent .menu-main-nav-container:has(#menu-item-126:hover)  ~ .watch,
+.parent .menu-main-nav-container:has(#menu-item-118:hover)  ~ .airpods,
+.parent .menu-main-nav-container:has(#menu-item-125:hover)  ~ .tv,
+.parent .menu-main-nav-container:has(#menu-item-120:hover)  ~ .entertain,
+.parent .menu-main-nav-container:has(#menu-item-124:hover)  ~ .support,
+.parent .menu-main-nav-container:has(#menu-item-119:hover)  ~ .where
+ {
+    display: block;
+}
+.parent:has(#menu-item-123:hover), .parent:has(.mac:hover),
+.parent:has(#menu-item-121:hover), .parent:has(.ipad:hover),
+.parent:has(#menu-item-122:hover), .parent:has(.iphone:hover),
+.parent:has(#menu-item-126:hover), .parent:has(.watch:hover),
+.parent:has(#menu-item-118:hover), .parent:has(.airpods:hover),
+.parent:has(#menu-item-125:hover), .parent:has(.tv:hover),
+.parent:has(#menu-item-120:hover), .parent:has(.entertain:hover),
+.parent:has(#menu-item-124:hover), .parent:has(.support:hover),
+.parent:has(#menu-item-119:hover), .parent:has(.where:hover)
+ {
+    height: 500px;
+}
+.parent:has(#menu-item-123:hover) ~ .overlay, .parent:has(.mac:hover) ~ .overlay,
+.parent:has(#menu-item-121:hover) ~ .overlay, .parent:has(.ipad:hover) ~ .overlay,
+.parent:has(#menu-item-122:hover) ~ .overlay, .parent:has(.iphone:hover) ~ .overlay,
+.parent:has(#menu-item-126:hover) ~ .overlay, .parent:has(.watch:hover) ~ .overlay,
+.parent:has(#menu-item-118:hover) ~ .overlay, .parent:has(.airpods:hover) ~ .overlay,
+.parent:has(#menu-item-125:hover) ~ .overlay, .parent:has(.tv:hover) ~ .overlay,
+.parent:has(#menu-item-120:hover) ~ .overlay, .parent:has(.entertain:hover) ~ .overlay,
+.parent:has(#menu-item-124:hover) ~ .overlay, .parent:has(.support:hover) ~ .overlay,
+.parent:has(#menu-item-119:hover) ~ .overlay, .parent:has(.where:hover) ~ .overlay
+ {
+    display: block;
+    pointer-events: none; 
+}
+.parent:has(#menu-item-123:hover) ~ .overlay::before, .parent:has(.mac:hover) ~ .overlay::before,
+.parent:has(#menu-item-121:hover) ~ .overlay::before, .parent:has(.ipad:hover) ~ .overlay::before,
+.parent:has(#menu-item-122:hover) ~ .overlay::before, .parent:has(.iphone:hover) ~ .overlay::before,
+.parent:has(#menu-item-126:hover) ~ .overlay::before, .parent:has(.watch:hover) ~ .overlay::before,
+.parent:has(#menu-item-118:hover) ~ .overlay::before, .parent:has(.airpods:hover) ~ .overlay::before,
+.parent:has(#menu-item-125:hover) ~ .overlay::before, .parent:has(.tv:hover) ~ .overlay::before,
+.parent:has(#menu-item-120:hover) ~ .overlay::before, .parent:has(.entertain:hover) ~ .overlay::before,
+.parent:has(#menu-item-124:hover) ~ .overlay::before, .parent:has(.support:hover) ~ .overlay::before,
+.parent:has(#menu-item-119:hover) ~ .overlay::before, .parent:has(.where:hover) ~ .overlay::before
+ {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+}
+.mac,
+.ipad,
+.iphone,
+.watch,
+.airpods,
+.tv,
+.entertain,
+.support,
+.where
+ {
+    display: none;
+    width: 100%;
+    height: 450px;
+    transition: all 0.3s;
+}
+.mac:hover,
+.ipad:hover,
+.iphone:hover,
+.watch:hover,
+.airpods:hover,
+.tv:hover,
+.entertain:hover,
+.support:hover,
+.where:hover
+ {
+    display: block;
+}

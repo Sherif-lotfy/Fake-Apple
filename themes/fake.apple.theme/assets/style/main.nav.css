@@ -24,12 +24,7 @@
 .parent .menu-main-nav-container:hover {
     color: #eee;
 }
-.parent .menu-main-nav-container:has(.menu-item:hover)  ~ .action {
-    display: block;
-}
-.parent:has(.menu-item:hover), .parent:has(.action:hover) {
-    height: 500px;
-}
+
 .fix {
     height: var(--nav-width);
     width: 100%;
@@ -46,49 +41,35 @@
     display: none;
     z-index: 2; 
 }
-.parent:has(.menu-item:hover) ~ .overlay, .parent:has(.action:hover) ~ .overlay {
-    display: block;
-    pointer-events: none; 
-}
-.parent:has(.menu-item:hover) ~ .overlay::before, .parent:has(.action:hover) ~ .overlay::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: all;
-}
+
+
 .parent h1 {
     color: white;
     font-family: sans-serif;
 }
-.action {
-    display: none;
-    width: 100%;
-    height: 450px;
-    transition: all 0.3s;
-}
-.action:hover {
-    display: block;
-}
+
 .main-nav-class {
     width: 70%;
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     list-style: none;
     font-family: sans-serif;
 }
-.menu-item {
+.menu-main-nav-container div ul li {
     height: 100%;
+    justify-content: center;
+    width: 90px;
     display: flex;
     align-items: center;
 }
 .menu-main-nav-container div ul li a {
     text-decoration: none;
     font-size: 12px;
-    color: white;
+    color: #bbb;
+}
+.menu-main-nav-container div ul li:hover a {
 
+    color: white;
 }

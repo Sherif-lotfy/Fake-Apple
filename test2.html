@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        :root {
+            --nav-width:50px;
+        }
         * {
             padding: 0;
             margin: 0;
@@ -11,7 +14,7 @@
         .parent {
             background: #444;
             color: white;
-            height: 200px;
+            height: var(--nav-width);
             width: 100%;
             cursor: pointer;
             position: absolute;
@@ -21,23 +24,9 @@
         .child {
             width: 100%;
             height: 50px;
-            /* display: flex;
-            align-items: flex-start;
-            justify-content: space-around; */
         }
         .child:hover {
             color: #eee;
-        }
-        .child:has(.menu-item:hover)  ~ .action {
-            display: block;
-        }
-        .parent:has(.menu-item:hover), .parent:has(.action:hover) {
-            height: 500px;
-        }
-        .fix {
-            height: 200px;
-            width: 100%;
-            z-index: -1;
         }
         .overlay {
             position: fixed;
@@ -50,11 +39,39 @@
             display: none;
             z-index: 2; 
         }
-        .parent:has(.menu-item:hover) ~ .overlay, .parent:has(.action:hover) ~ .overlay {
+        .fix {
+            height: var(--nav-width);
+            width: 100%;
+            z-index: -1;
+        }
+        .child:has(.item1:hover)  ~ .action1,
+        .child:has(.item2:hover)  ~ .action2,
+        .child:has(.item3:hover)  ~ .action3,
+        .child:has(.item4:hover)  ~ .action4
+        {
+            display: block;
+        }
+        .parent:has(.item1:hover), .parent:has(.action1:hover),
+        .parent:has(.item2:hover), .parent:has(.action2:hover),
+        .parent:has(.item3:hover), .parent:has(.action3:hover),
+        .parent:has(.item4:hover), .parent:has(.action4:hover)
+        {
+            height: 400px;
+        }
+        .parent:has(.item1:hover) ~ .overlay, .parent:has(.action1:hover) ~ .overlay,
+        .parent:has(.item2:hover) ~ .overlay, .parent:has(.action2:hover) ~ .overlay,
+        .parent:has(.item3:hover) ~ .overlay, .parent:has(.action3:hover) ~ .overlay,
+        .parent:has(.item4:hover) ~ .overlay, .parent:has(.action4:hover) ~ .overlay
+        {
             display: block;
             pointer-events: none; 
         }
-        .parent:has(.menu-item:hover) ~ .overlay::before, .parent:has(.action:hover) ~ .overlay::before {
+        .parent:has(.item1:hover) ~ .overlay::before, .parent:has(.action1:hover) ~ .overlay::before,
+        .parent:has(.item2:hover) ~ .overlay::before, .parent:has(.action2:hover) ~ .overlay::before,
+        .parent:has(.item3:hover) ~ .overlay::before, .parent:has(.action3:hover) ~ .overlay::before,
+        .parent:has(.item4:hover) ~ .overlay::before, .parent:has(.action4:hover) ~ .overlay::before
+
+         {
             content: '';
             position: absolute;
             top: 0;
@@ -63,18 +80,27 @@
             height: 100%;
             pointer-events: all;
         }
-        h1 {
-            color: white;
-            font-family: sans-serif;
-        }
-        .action {
+        .action1,
+        .action2,
+        .action3,
+        .action4
+         {
             display: none;
             width: 100%;
             height: 450px;
             transition: all 0.3s;
         }
-        .action:hover {
+        .action1:hover,
+        .action2:hover,
+        .action3:hover,
+        .action4:hover
+         {
             display: block;
+        }
+
+        h1 {
+            color: white;
+            font-family: sans-serif;
         }
         .main-nav-class {
             width: 100%;
@@ -97,14 +123,23 @@
     <div class="parent">
         <div class="child">
             <ul class="main-nav-class">
-                <li class="menu-item">item1</li>
-                <li class="menu-item">item2</li>
-                <li class="menu-item">item3</li>
-                <li class="menu-item">item4</li>
+                <li class="menu-item item1">item1</li>
+                <li class="menu-item item2">item2</li>
+                <li class="menu-item item3">item3</li>
+                <li class="menu-item item4">item4</li>
             </ul>
         </div>
-        <div class="action">
-            <h1>someText...</h1>
+        <div class="action1">
+            <h1>item1</h1>
+        </div>
+        <div class="action2">
+            <h1>item2</h1>
+        </div>
+        <div class="action3">
+            <h1>item3</h1>
+        </div>
+        <div class="action4">
+            <h1>item4</h1>
         </div>
     </div>
     <div class="fix"></div>
